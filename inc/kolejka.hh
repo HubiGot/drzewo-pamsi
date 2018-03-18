@@ -28,7 +28,7 @@ public:
   bool empty();                   // metoda sprawdzajaca czy kolejka jest pusta
   int front();                    // metoda zwracajaca poczatek kolejki
   int frontprio();                //metoda zwracajaca priotytet poczatkowego elementu kolejki
-  void push(int prio, int dt)     // metoda zapisujaca element w kolejce
+  void push(int prio, int dt);     // metoda zapisujaca element w kolejce
   void pop();                     // metoda usuwajaca poczatkowy element z kolejki
 };
 
