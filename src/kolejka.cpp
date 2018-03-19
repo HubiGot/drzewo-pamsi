@@ -35,6 +35,7 @@ int queue::front()
 if(head==0)
   {
     cout<<"Kolejka pusta! :("<<endl;
+    return 0;
   }
   else
   {
@@ -48,6 +49,7 @@ int queue::frontprio()
 if(head==0)
 {
   cout<<"Kolejka pusta! :("<<endl;
+  return 0;
 }
   else
   {
