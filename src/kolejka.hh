@@ -4,7 +4,7 @@
 #include<iostream>
 #include<iomanip>
 #include<cmath>
-#include<stdlib>
+#include<cstdlib>
 
 using namespace std;
 
@@ -19,8 +19,8 @@ struct list {
 
 class queue {
 
-list *head                          //wskaznik na poczatek kolejki
-list *tail                          //wskaznik na koniec kolejki
+list *head;                          //wskaznik na poczatek kolejki
+list *tail;                          //wskaznik na koniec kolejki
 
 public:
   queue();                        //konstruktor kolejki
