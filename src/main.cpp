@@ -15,17 +15,40 @@ using namespace std;
 
 main(){
 
-queue kolejka;
-int liczba, prio,i;
+  int wybor;
+	queue kolejka;
+	do {
+    cout << "Kolejka priorytetowa" << endl;
+		cout << "1. Wyswietlanie" << endl;
+		cout << "2. Dodawanie" << endl;
+		cout << "3. Usuwanie" << endl;;
+		cout << "4. Koniec programu" << endl;
+		cin >> wybor;
 
-cout<<"Kolejka!"<<endl;
-for(i=0;i<5;i++)
-{
-cin>>liczba;
-cin>>prio;
-kolejka.push(liczba,prio);
-}
-kolejka.display();
+		switch (wybor) {
 
-  return 0;
+			break;
+		case 1:
+			kolejka.display();
+			cout << "\n";
+			break;
+		case 2:
+			int liczba, prio;
+      cout << "Podaj element, wcisnij eneter, a nastepnie podaj jego priorytet"<<endl;
+			cin >> liczba;
+      cin >> prio;
+			kolejka.push(liczba,prio);
+			break;
+		case 3:
+			kolejka.pop();
+			cout << "Usunieto pierwszy element" << endl;
+			break;
+		case 4:
+			exit(1);
+			break;
+
+
+
+		}
+	} while (wybor != 4);
 }
