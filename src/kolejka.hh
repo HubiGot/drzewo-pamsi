@@ -2,12 +2,13 @@
 #define KOLEJKA_HH
 
 #include<iostream>
-#include<cstdlib>
-
+#include<iomanip>
+#include<cmath>
+#include<stdlib>
 
 using namespace std;
 
-
+//Typ elementow kolejki priorytetowej
 struct list {
 
   list *next;
@@ -18,8 +19,8 @@ struct list {
 
 class queue {
 
-list *head;                          //wskaznik na poczatek kolejki
-list *tail;                          //wskaznik na koniec kolejki
+list *head                          //wskaznik na poczatek kolejki
+list *tail                          //wskaznik na koniec kolejki
 
 public:
   queue();                        //konstruktor kolejki
@@ -32,6 +33,10 @@ public:
   void display();                 //metoda wyswietla na wyjscie elementy kolejki
 
 };
+
+
+
+
 
 
 
