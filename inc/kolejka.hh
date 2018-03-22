@@ -2,12 +2,13 @@
 #define KOLEJKA_HH
 
 #include<iostream>
+#include<iomanip>
+#include<cmath>
 #include<cstdlib>
-
 
 using namespace std;
 
-
+//Typ elementow kolejki priorytetowej
 struct list {
 
   list *next;
@@ -30,8 +31,14 @@ public:
   void push(int data, int prio);     // metoda zapisujaca element w kolejce
   void pop();                     // metoda usuwajaca poczatkowy element z kolejki
   void display();                 //metoda wyswietla na wyjscie elementy kolejki
+  void pushsort();
+
 
 };
+
+
+
+
 
 
 

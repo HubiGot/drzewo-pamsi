@@ -31,7 +31,7 @@ public:
   void push(int data, int prio);     // metoda zapisujaca element w kolejce
   void pop();                     // metoda usuwajaca poczatkowy element z kolejki
   void display();                 //metoda wyswietla na wyjscie elementy kolejki
-
+  void pushsort(int data, int prio); //metoda wstawiajac element sortuje kolejke wg priorytetu
 };
 
 
