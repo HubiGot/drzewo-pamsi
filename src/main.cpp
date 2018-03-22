@@ -10,6 +10,24 @@
 
 using namespace std;
 
+//algorytm sortowania
+void sort(queue &K)
+{
+  queue P;
+  list *e=new list;
+  while(!K.empty())
+  {
+    e=K.frontpop();
+    P.push(e->data,e->prio);
+  }
+  while(!P.empty())
+  {
+  e=P.findMax();
+  K.push(e->data,e->prio);
+  P.remove(e);
+  }
+
+}
 
 
 
@@ -24,6 +42,7 @@ main(){
     cout << "3. Dodawanie z sortowaniem przez wybieranie wg priorytetu"<<endl;
 		cout << "4. Usuwanie pierwszego elementu" << endl;
 		cout << "5. Koniec dzialania programu :)" << endl;
+    cout << "6. Sortowanie przez wybieranie" <<endl;
 		cin >> wybor;
 
 		switch (wybor) {
@@ -65,7 +84,12 @@ main(){
 			cout << "Koniec dzialania programu!"<<endl;
 			break;
       }
-
+      case 6:
+      {
+        sort(kolejka);
+        cout<<"Kolejka została posortowana! :)"<<endl;
+        break;
+      }
 
 		}
 	} while (wybor != 5);

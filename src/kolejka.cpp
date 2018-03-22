@@ -63,12 +63,12 @@ void queue::push(int data, int prio)
   p->next = NULL;
   p->data=data;
   p->prio=prio;
-  if(tail!=0)
+  if(tail!=NULL)
     {
       tail->next=p;
       tail=p;
     }
-    else
+    else    //gdy kolejka pusta
     {
       head=p;
       tail=p;
@@ -80,10 +80,10 @@ void queue::pop()
   {
 		if(head)
     {
-      list* p=head;
-      head=head->next;
-      if(!head) tail=NULL;
-      delete p;
+      list* p=head;       //tworzymy element pomocniczy
+      head=head->next;    //przesuwamy glowe
+      if(!head) tail=NULL;      //sprawdzamy czy nie pusta
+      delete p;               // usuwamy element
     }
 	}
 
@@ -137,7 +137,25 @@ if(!head)                               //sprawdzamy czy kolejka jest pusta
 
       if(!p->next) tail = p;    //jesli element jest na koncu to przesuwamy na niego ogon
   }
-
-
+}
+//********************************************************************************************************************************8
+//TESTY
+/*
+void sort(queue &K)
+{
+  queue P;
+  list *e=new list;
+  while(!K.empty())
+  {
+    e=K.frontpop();
+    P.push(e->data,e->prio);
+  }
+  while(!P.empty())
+  {
+  e=P.findMax();
+  K.push(e->data,e->prio);
+  P.remove(e);
+  }
 
 }
+*/
