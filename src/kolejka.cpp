@@ -16,6 +16,16 @@ queue::~queue()
   }
 }
 
+
+bool queue::empty()
+{
+  return !head;
+}
+
+
+
+
+/*
 //funkcja sprawdza czy kolejka jest pusta -> zwraca true jesli jest pusta
 bool queue::empty()
 {
@@ -27,7 +37,7 @@ if(head==NULL)
     {
     return 0;
     }
-}
+}*/
 
 
 //funkcja zwraca pierwszy element w kolejce

@@ -15,6 +15,7 @@ void sort(queue &K)
 {
   queue P;
   list *e=new list;
+  int i;
   while(!K.empty())
   {
     e=K.frontpop();
@@ -25,7 +26,7 @@ void sort(queue &K)
   e=P.findMax();
   K.push(e->data,e->prio);
   P.remove(e);
-  }
+}
 
 }
 
@@ -41,8 +42,8 @@ main(){
 		cout << "2. Dodawanie elementu bez sortowania" << endl;
     cout << "3. Dodawanie z sortowaniem przez wybieranie wg priorytetu"<<endl;
 		cout << "4. Usuwanie pierwszego elementu" << endl;
-		cout << "5. Koniec dzialania programu :)" << endl;
-    cout << "6. Sortowanie przez wybieranie" <<endl;
+    cout << "5. Sortowanie przez wybieranie" <<endl;
+		cout << "6. Zakończ" << endl;
 		cin >> wybor;
 
 		switch (wybor) {
@@ -79,12 +80,12 @@ main(){
 			cout << "Usunieto pierwszy element z kolejki" << endl;
 			break;
       }
-		case 5:
+		case 6:
       {
 			cout << "Koniec dzialania programu!"<<endl;
 			break;
       }
-      case 6:
+      case 5:
       {
         sort(kolejka);
         cout<<"Kolejka została posortowana! :)"<<endl;
@@ -92,5 +93,5 @@ main(){
       }
 
 		}
-	} while (wybor != 5);
+	} while (wybor != 6);
 }

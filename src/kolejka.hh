@@ -47,14 +47,16 @@ public:
   //metoda zwraca pierwszy element kolejki i usuwa go
   list* frontpop() //dziala poprawnie
   {
+    list *p;
   if(head==NULL)
     {
       cout<<"Kolejka pusta! :("<<endl;
     }
     else
     {
-      return head;
+      p=head;
       this->pop();
+      return p;
     }
   }
 
